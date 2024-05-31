@@ -8,6 +8,6 @@ class Solution {
                 j++;
            }
         }
-        return uniqueNumbers.size();
+        return j;
     }
 }
