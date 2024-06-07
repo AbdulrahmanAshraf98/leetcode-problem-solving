@@ -1,10 +1,9 @@
 class Solution {
     public boolean containsDuplicate(int[] nums) {
-        HashMap<Integer, Integer> nonDuplicateNumbe = new HashMap<>();
+        HashSet<Integer> nonDuplicateNumber = new HashSet<>();
         for(int num:nums){
-            if(!nonDuplicateNumbe.containsKey(num))
-                nonDuplicateNumbe.put(num, 1);
-            else return true;
+            if(!nonDuplicateNumber.add(num))
+                return true;
         }
         return false;
     }
