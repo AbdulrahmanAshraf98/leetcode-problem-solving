@@ -24,6 +24,7 @@ class Solution {
             }
             fast = fast.next;
         }
+        System.gc();
         return head;
     }
 }
