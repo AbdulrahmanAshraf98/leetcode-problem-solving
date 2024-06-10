@@ -3,15 +3,13 @@ class Solution {
         StringBuilder mergedString=new StringBuilder();
         int i = 0 ;
         int j = 0;
-        char[] firstWordCharcheter=word1.toCharArray();
-        char[] secondWordCharcheter=word2.toCharArray();
         int lengthWordLength= Math.max(word1.length(),word2.length());
         while(i<lengthWordLength||j<lengthWordLength){
-            if(i<firstWordCharcheter.length){
-                mergedString.append(firstWordCharcheter[i]);
+            if(i<word1.length()){
+                mergedString.append(word1.charAt(i));
             }
-            if(j<secondWordCharcheter.length){
-                mergedString.append(secondWordCharcheter[j]);
+            if(j<word2.length()){
+                mergedString.append(word2.charAt(j));
             }
                 i++;
                 j++;
