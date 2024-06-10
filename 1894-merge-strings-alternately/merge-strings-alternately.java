@@ -16,7 +16,6 @@ class Solution {
                 i++;
                 j++;
         }
-        System.gc();
         return mergedString.toString();
     }
 }
