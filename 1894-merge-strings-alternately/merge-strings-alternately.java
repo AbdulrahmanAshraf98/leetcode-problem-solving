@@ -6,7 +6,6 @@ class Solution {
         char[] firstWordCharcheter=word1.toCharArray();
         char[] secondWordCharcheter=word2.toCharArray();
         int lengthWordLength= Math.max(word1.length(),word2.length());
-
         while(i<lengthWordLength||j<lengthWordLength){
             if(i<firstWordCharcheter.length){
                 mergedString.append(firstWordCharcheter[i]);
@@ -17,6 +16,7 @@ class Solution {
                 i++;
                 j++;
         }
+        System.gc();
         return mergedString.toString();
     }
 }
