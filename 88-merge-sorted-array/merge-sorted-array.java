@@ -26,7 +26,9 @@ class Solution {
             j++;
             c++;
             }
-        System.arraycopy(mergeSortedArray, 0, nums1, 0, m+n);
-
+        for (int k = 0; k < m+n; k++) {
+            if(nums1[k]!=mergeSortedArray[k])
+            nums1[k] = mergeSortedArray[k];
+        }
     }
 }
