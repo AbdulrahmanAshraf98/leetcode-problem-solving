@@ -1,23 +1,26 @@
 class Solution {
     public int arithmeticTriplets(int[] nums, int diff) {
-       int counter = 0;
-            for (int i = 0; i < nums.length - 2; i++) {
-                int k = i + 1;
-                int j = i + 2;
-                while (j < nums.length) {
-                    if (nums[k] - nums[i] == diff && nums[j] - nums[k] == diff) {
-                        counter++;
-                        j++;
-                    } else if (nums[k] - nums[i] < diff || nums[j] - nums[k] > diff) {
-                        k++;
-                        if (k == j) {
-                            j++;
+        int i = 0;
+        int k= 1;
+        int j= nums.length-1;
+        int counter = 0;
+        while (i<nums.length-2){
+            while(k<j){
+                if(nums[k]-nums[i]==diff){
+                    while (k<j){
+                        if(nums[j]-nums[k]==diff){
+                            counter++;
                         }
-                    } else {
-                        j++;
+                        j--;
                     }
+                    j= nums.length-1;
                 }
+                k++;
             }
-            return counter;
+            i++;
+            k=i+1;
+
+        }
+        return  counter ;
     }
 }
