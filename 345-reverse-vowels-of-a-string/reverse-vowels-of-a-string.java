@@ -1,6 +1,7 @@
 class Solution {
+    private static final HashSet<Character> vowels = new HashSet<>(Arrays.asList('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'));
     public String reverseVowels(String s) {
-    HashSet<Character> vowels = new HashSet<>(Arrays.asList('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'));
+ 
     char[] chars = s.toCharArray();
     int i =0 ; 
     int j = chars.length - 1 ;
