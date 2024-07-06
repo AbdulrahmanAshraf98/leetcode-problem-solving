@@ -1,8 +1,9 @@
 class Solution {
     public boolean isSubsequence(String s, String t) {
         if(s.length()==0)return true;
-        int subSequenceCount=0;
-        int j = 0;
+        if(t.length()<s.length())return false;
+        int j = 0 ; 
+        int count = 0;
         for(char c : t.toCharArray()){
             if(c==s.charAt(j)){
                 j++;
@@ -10,6 +11,6 @@ class Solution {
 
             }
         }
-        return j==s.length();
+        return s.length()==count;
     }
 }
