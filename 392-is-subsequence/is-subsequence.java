@@ -3,13 +3,16 @@ class Solution {
         if(s.length()==0)return true;
         int i = 0 ; 
         int j = 0 ; 
-        while(i<t.length()&&j<s.length()){
+        int sLength=s.length();
+        int tLength=t.length();
+        while(i<tLength&&j<sLength){
             if(t.charAt(i)==s.charAt(j)){
+                if(sLength==j)return true ;
                 j++;
             }
             i++;
         }
-        return s.length()==j;
+        return sLength==j;
 
     }
 }
