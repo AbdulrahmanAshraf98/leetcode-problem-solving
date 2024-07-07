@@ -1,6 +1,9 @@
 class Solution {
     public List<String> topKFrequent(String[] words, int k) {
-        HashMap<String,Integer> frequentWords= new HashMap<>();
+         if(words == null || words.length == 0) {
+            return new ArrayList<String>();
+        }
+        HashMap<String,Integer> frequentWords= new HashMap<>();   
         for(String word : words ){
             if(frequentWords.get(word)!=null)frequentWords.put(word,frequentWords.get(word)+1);
             else frequentWords.put(word,1);
