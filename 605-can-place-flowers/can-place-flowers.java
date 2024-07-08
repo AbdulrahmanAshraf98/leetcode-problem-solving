@@ -1,5 +1,8 @@
 class Solution {
     public boolean canPlaceFlowers(int[] flowerbed, int n) {
+        if (n == 0) {
+            return true;
+        }
         int[] newflowerbed = new int[flowerbed.length+2];
         newflowerbed[0]=0;
         newflowerbed[newflowerbed.length-1]=0;
