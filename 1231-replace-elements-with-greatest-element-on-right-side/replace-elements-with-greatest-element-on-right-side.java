@@ -6,7 +6,6 @@ class Solution {
             nums[i]=maxRightElement;
             maxRightElement=Math.max(maxRightElement,current);
         }
-
         return nums;
     }
 }
