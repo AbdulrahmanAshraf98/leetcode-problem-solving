@@ -27,8 +27,8 @@ class Solution {
             slow=fast;
             fast=fast.next;
         }
-        fast.next = head;
         slow.next = null;
+        fast.next = head;
         head = fast;
         k--;
         }
