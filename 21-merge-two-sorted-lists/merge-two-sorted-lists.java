@@ -31,13 +31,5 @@ class Solution {
         }
         return temp.next;
     }
-    public int getLengthOfList(ListNode list){
-        int counter = 0 ;
-        ListNode temp= list ;
-        while(temp!=null){
-            counter++;
-            temp = temp.next;
-        }
-        return counter ; 
-    }
+  
 }
