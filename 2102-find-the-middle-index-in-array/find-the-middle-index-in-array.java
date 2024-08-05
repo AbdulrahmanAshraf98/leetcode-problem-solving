@@ -1,7 +1,10 @@
 class Solution {
     public int findMiddleIndex(int[] nums) {
-        int rightSum = Arrays.stream(nums).sum();
-        int leftSum=0; 
+        int rightSum =0;
+        int leftSum=0;
+        for(int num : nums){
+            rightSum+=num;
+        }
         for(int i = 0 ; i<nums.length;i++){
            rightSum-=nums[i];
            if(leftSum==rightSum)return i ;
