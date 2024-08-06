@@ -6,8 +6,7 @@ class Solution {
             if (parts.length != 2) continue;
             String local = parts[0];
             String domain = parts[1];
-            if(local.contains("+")) local = local.split("\\+")[0];
-            local=local.replace(".","");
+            local = local.split("\\+")[0].replace(".","");
             String cleanEmail= local+"@"+domain;
             if(!uniqueEmails.contains(cleanEmail))uniqueEmails.add(cleanEmail);
         }
