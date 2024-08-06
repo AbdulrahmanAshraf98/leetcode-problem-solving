@@ -1,6 +1,6 @@
 class Solution {
     public int numUniqueEmails(String[] emails) {
-        Set<String> uniqueEmails = new HashSet<>();
+        List<String> uniqueEmails = new ArrayList<>();
         for(String email : emails){
             String[] parts = email.split("@");
             if (parts.length != 2) continue;
