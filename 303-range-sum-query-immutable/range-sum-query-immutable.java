@@ -1,24 +1,24 @@
 class NumArray {
     int [] nums;
-    // Map<String, Integer> cache;
+    Map<String, Integer> cache;
 
     public NumArray(int[] nums) {
         this.nums=nums;
-        // this.cache = new HashMap<>();
+        this.cache = new HashMap<>();
     }
     
     public int sumRange(int left, int right) {
-        // String key = left + "-" + right;
-        //  if (cache.containsKey(key)) {
-        //     return cache.get(key);
-        // }
+        String key = left + "-" + right;
+         if (cache.containsKey(key)) {
+            return cache.get(key);
+        }
         int sum = 0;
         int i = left;
         while(i<=right){
             sum+=nums[i];
             i++;
         }
-        // cache.put(key, sum);
+        cache.put(key, sum);
         return sum ; 
     }
 }
