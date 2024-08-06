@@ -1,6 +1,6 @@
 class Solution {
     public int numUniqueEmails(String[] emails) {
-        List<String> uniqueEmails = new ArrayList<>();
+        Set<String> uniqueEmails = new HashSet<>();
         for(String email : emails){
             String[] parts = email.split("@");
             if (parts.length != 2) continue;
@@ -9,7 +9,7 @@ class Solution {
             if(local.contains("+")) local = local.substring(0 , local.indexOf("+"));
             local=local.replace(".","");
             String cleanEmail= local+"@"+domain;
-            if(!uniqueEmails.contains(cleanEmail)) uniqueEmails.add(cleanEmail);
+            if(!uniqueEmails.contains(cleanEmail))uniqueEmails.add(cleanEmail);
         }
         return uniqueEmails.size();
         
