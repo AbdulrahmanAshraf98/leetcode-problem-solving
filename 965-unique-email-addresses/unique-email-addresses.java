@@ -8,7 +8,7 @@ class Solution {
             String domain = parts[1];
             local = local.split("\\+")[0].replace(".","");
             String cleanEmail= local+"@"+domain;
-            uniqueEmails.add(cleanEmail);
+            if(!uniqueEmails.contains(cleanEmail))uniqueEmails.add(cleanEmail);
         }
         return uniqueEmails.size();
         
